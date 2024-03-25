@@ -12,9 +12,11 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
 
     private WebDriver driver;
+
     protected WebDriver getDriver() {
         return driver;
     }
+
     protected void loginWeb() {
         driver.get("https://www.webstaurantstore.com/");
     }

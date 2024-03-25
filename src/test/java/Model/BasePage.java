@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public abstract class BasePage {
 
     private WebDriver driver;
@@ -20,7 +22,7 @@ public abstract class BasePage {
 
     public WebDriverWait getWait5() {
         if (wait == null) {
-            wait = new WebDriverWait(getDriver(), 10);
+            wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         }
 
         return wait;
