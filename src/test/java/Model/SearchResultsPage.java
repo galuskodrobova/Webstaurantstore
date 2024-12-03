@@ -60,17 +60,17 @@ public class SearchResultsPage extends BasePage{
     }
 
     public CartPage emptyConfirmationButton() {
-        wait.until(ExpectedConditions.visibilityOf(emptyConfirmationButton)).click();
+        getWait5().until(ExpectedConditions.visibilityOf(emptyConfirmationButton)).click();
 
         return new CartPage(getDriver());
     }
 
-    public SearchResultsPage checkSearchResults() {
+    public SearchResultsPage checkSearchResults(String searchWord) {
         do {
             // Check products on the current page
             for (WebElement product : productsSearchResult) {
                 String title = product.getText();
-                Assert.assertTrue(title.contains("Table"), "Product title does not contain 'Table'");
+                Assert.assertTrue(title.contains(searchWord), "Product title does not contain 'Table'");
             }
             // Navigate to the next page if available
             navigateToNextPage(getDriver());

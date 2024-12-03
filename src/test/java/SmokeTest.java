@@ -14,7 +14,7 @@ public class SmokeTest extends BaseTest {
         CartPage submitSearch = new SearchResultsPage(getDriver())
                 .inputSearchProduct("stainless work table")
                 .submitSearchButton()
-                .checkSearchResults()
+                .checkSearchResults("Table")
                 .addLastProductToCart()
                 .emptyCartButton()
                 .emptyConfirmationButton();
