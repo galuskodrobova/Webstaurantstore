@@ -18,7 +18,7 @@ public class BaseTest {
     }
 
     protected void loginWeb() {
-        driver.get("https://www.cokeconsolidated.com/equipment-services/");
+        driver.get("https://www.petscreening.com");
     }
 
     @BeforeClass

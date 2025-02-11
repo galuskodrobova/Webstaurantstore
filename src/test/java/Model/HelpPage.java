@@ -2,9 +2,9 @@ package Model;
 
 import org.openqa.selenium.WebDriver;
 
-public class CareersPage extends BasePage {
+public class HelpPage extends BasePage {
 
-    public CareersPage(WebDriver driver) {
+    public HelpPage(WebDriver driver) {
         super(driver);
     }
 }
